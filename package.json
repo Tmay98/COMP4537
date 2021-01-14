@@ -1,0 +1,20 @@
+{
+  "name": "COMP4537",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tmay98/COMP4537.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tmay98/COMP4537/issues"
+  },
+  "homepage": "https://github.com/Tmay98/COMP4537#readme"
+}
