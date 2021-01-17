@@ -1,21 +1,9 @@
-.column {
-    float: left;
-    width: 20%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 body {
     background-color: linen;
 }
 
 p {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 h2 {
