@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="js/index.js"></script>
     <title>Quiz Questions</title>
 </head>
 <body>
@@ -14,10 +15,10 @@
             <div><span style="color: dodgerblue">console</span>.log(name <span style="color: orange">?? </span>
                 <span style="color: green">"Anonymous"</span>);</div>
             <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) name <br>
-            <input type="radio" name="color" value="a"> a) Anonymous <br>
-            <input type="radio" name="color" value="a"> a) tommy <br>
+            <input type="radio" name="q1" value="a"> a) null <br>
+            <input type="radio" name="q1" value="a"> b) name <br>
+            <input type="radio" name="q1" value="a"> c) Anonymous <br>
+            <input type="radio" name="q1" value="a"> d) tommy <br>
         </li>
 
         <li>
@@ -27,10 +28,10 @@
             <div><span style="color: dodgerblue">console</span>.log(name <span style="color: orange">?? </span>
                 <span style="color: green">"Anonymous"</span>);</div>
             <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) name <br>
-            <input type="radio" name="color" value="a"> a) Anonymous <br>
-            <input type="radio" name="color" value="a"> a) tommy <br>
+            <input type="radio" name="q2" value="a"> a) null <br>
+            <input type="radio" name="q2" value="a"> b) name <br>
+            <input type="radio" name="q2" value="a"> c) Anonymous <br>
+            <input type="radio" name="q2" value="a"> d) tommy <br>
         </li>
 
         <li>
@@ -41,12 +42,12 @@
             <div><span style="color: red">let</span> third =  <span style="color: green">"3"</span>;</div>
             <div><span style="color: dodgerblue">console</span>.log(first <span style="color: orange">?? </span>
                 second <span style="color: orange">?? </span>
-                last)</span></div>
+                thrid)</span></div>
             <br>
-            <input type="radio" name="color" value="a"> a) 0 <br>
-            <input type="radio" name="color" value="a"> a) 3 <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) ?? <br>
+            <input type="radio" name="q3" value="a"> a) 0 <br>
+            <input type="radio" name="q3" value="a"> b) 3 <br>
+            <input type="radio" name="q3" value="a"> c) null <br>
+            <input type="radio" name="q3" value="a"> d) ?? <br>
         </li>
 
         <li>
@@ -59,10 +60,10 @@
                 second <span style="color: orange">?? </span>
                 last)</span></div>
             <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) 1 <br>
-            <input type="radio" name="color" value="a"> a) 0 <br>
-            <input type="radio" name="color" value="a"> a) 3 <br>
+            <input type="radio" name="q4" value="a"> a) null <br>
+            <input type="radio" name="q4" value="a"> b) 1 <br>
+            <input type="radio" name="q4" value="a"> c) 0 <br>
+            <input type="radio" name="q4" value="a"> d) 3 <br>
         </li>
 
         <li>
@@ -72,10 +73,10 @@
 
             <div><span style="color: dodgerblue">console</span>.log(length <span style="color: orange">?? </span>100)</div>
             <br>
-            <input type="radio" name="color" value="a"> a) 0 <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) 100 <br>
-            <input type="radio" name="color" value="a"> a) ?? <br>
+            <input type="radio" name="q5" value="a"> a) 0 <br>
+            <input type="radio" name="q5" value="a"> b) null <br>
+            <input type="radio" name="q5" value="a"> c) 100 <br>
+            <input type="radio" name="q5" value="a"> d) ?? <br>
         </li>
 
         <li>
@@ -85,13 +86,25 @@
 
             <div><span style="color: dodgerblue">console</span>.log(length <span style="color: orange">|| </span>100)</div>
             <br>
-            <input type="radio" name="color" value="a"> a) 0 <br>
-            <input type="radio" name="color" value="a"> a) null <br>
-            <input type="radio" name="color" value="a"> a) 100 <br>
-            <input type="radio" name="color" value="a"> a) ?? <br>
+            <input type="radio" name="q6" value="a"> a) 0 <br>
+            <input type="radio" name="q6" value="a"> b) null <br>
+            <input type="radio" name="q6" value="a"> c) 100 <br>
+            <input type="radio" name="q6" value="a"> d) ?? <br>
         </li>
     </ol>
 
+    <button onclick="myFunction()">View Answer Key</button>
+
+    <div id="myDIV" style="display: none">
+        <h4>
+            c
+            d
+            b
+            b
+            a
+            c
+        </h4>
+    </div>
     <form>
         <input type="button" value="Back" onclick="history.back()">
     </form>
