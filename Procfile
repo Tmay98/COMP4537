@@ -1,1 +1,1 @@
-web: node COMP4537/labs/4/index.js && readFile.js
+web: node COMP4537/labs/4/index.js & node COMP4537/labs/4/index.js
