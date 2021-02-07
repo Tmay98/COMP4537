@@ -9,5 +9,6 @@ http.createServer(function (req, res) {
         if (err) throw err;
         console.log('Updated!');
     });
-}).listen(8080);
+}
+).listen(process.env.PORT || 3000);
 console.log('listening ...');
