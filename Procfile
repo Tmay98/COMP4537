@@ -1,1 +1,1 @@
-web: node getDate.js
+web: node /COMP4537/labs/4/getDate.js
