@@ -6,7 +6,7 @@ http.createServer(function (req, res) {
     const q = url.parse(req.url, true);
     const filename = "." + q.pathname;
     fs.appendFile('file.txt',  q.query["text"], function (err) {
-        if (err) throw err;
+        if (err) console.log('error!');
         console.log('Updated!');
     });
 }
