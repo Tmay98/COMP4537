@@ -1,5 +1,5 @@
 let http = require('http');
-let dt = require('./COMP4537/labs/4/modules/utils')
+let dt = require('./modules/utils')
 let url = require('url')
 http.createServer(function (request, response) {
     let q = url.parse(request.url, true);
