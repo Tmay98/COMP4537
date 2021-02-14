@@ -14,13 +14,19 @@
     function myfunc() {
         const xhttp = new XMLHttpRequest();
         const name = document.getElementById("name").value;
-        const score = document.getElementById("score").value;
-        xhttp.open("GET", "https://tommy-write.herokuapp.com/?name=" + name + "&score=" + score, true);
-        xhttp.send();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                document.getElementById("confirm").innerHTML =
-                    this.responseText;
+        const score = parseInt(document.getElementById("score").value);
+        if (isNaN(score)){
+            document.getElementById("confirm").innerHTML =
+                "Score must be an integer"
+        }
+        else {
+            xhttp.open("GET", "https://tommy-write.herokuapp.com/?name=" + name + "&score=" + score, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("confirm").innerHTML =
+                        this.responseText;
+                }
             }
         }
     }
