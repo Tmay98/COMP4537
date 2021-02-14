@@ -1,0 +1,26 @@
+<div id="demo">
+    <h1>Enter name and score</h1>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="John"><br>
+    <label for="score">Score:</label><br>
+    <input type="text" id="score" name="score" value="0"><br>
+    <button type="button" onclick="myfunc()">
+        store in DB
+    </button>
+</div>
+
+<script>
+    function myfunc() {
+        const xhttp = new XMLHttpRequest();
+        const name = document.getElementById("name").value;
+        const score = document.getElementById("score").value;
+        xhttp.open("GET", "http://localhost:8888/?name=" + name + "&score=" + score, true);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                document.getElementById("demo").innerHTML =
+                    this.responseText;
+            }
+        }
+    }
+</script>
