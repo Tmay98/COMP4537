@@ -40,7 +40,7 @@ function deleteQuote() {
     const xhttp = new XMLHttpRequest();
     const id = quoteCurr;
     console.log(id);
-    xhttp.open("GET", "http://localhost:3040/?index=" + id, true);
+    xhttp.open("GET", "https://tommy-delete.herokuapp.com/?index=" + id, true);
     xhttp.send();
     let el = document.getElementById("q" + id);
     el.parentNode.removeChild(el);
@@ -53,14 +53,14 @@ function saveQuote() {
     const name = document.getElementById('qText' + id.toString()).value;
     const score = document.getElementById('qAuth' + id.toString()).value;
     console.log(id);
-    xhttp.open("GET", "http://localhost:3030/?index=" + id + "&quoteText=" + name + "&author=" + score, true);
+    xhttp.open("GET", "https://tommy-write.herokuapp.com/?index=" + id + "&quoteText=" + name + "&author=" + score, true);
     xhttp.send();
 }
 
 function initfromdb() {
     const xhttp = new XMLHttpRequest();
     let b = [];
-    xhttp.open("GET", "http://localhost:3000/", true);
+    xhttp.open("GET", "https://tommy-read.herokuapp.com/", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
