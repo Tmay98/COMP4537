@@ -26,7 +26,10 @@ function createNewQuote() {
     quoteTotal.id = 'q' + quoteCount;
     quoteTextArea.id = 'qText' + quoteCount;
     quoteAuthor.id = 'qAuth' + quoteCount;
-
+    quoteTextArea.cols = 35;
+    quoteTextArea.rows = 5;
+    quoteAuthor.cols = 35;
+    quoteAuthor.rows = 5;
     quoteTotal.appendChild(quoteTextArea);
     quoteTotal.appendChild(quoteAuthor);
     quoteTotal.appendChild(quoteSaveButton);
@@ -90,6 +93,11 @@ function initfromdb() {
                     deleteQuote()
 
                 };
+
+                quoteTextArea.cols = 35;
+                quoteTextArea.rows = 5;
+                quoteAuthor.cols = 35;
+                quoteAuthor.rows = 5;
 
                 quoteTotal.id = 'q' + b[i];
                 quoteTextArea.id = 'qText' + b[i];
