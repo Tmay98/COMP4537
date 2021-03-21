@@ -26,6 +26,11 @@ function initfromdbRead() {
                 quoteTextArea.value = b[i + 1];
                 quoteAuthor.value = b[i + 2];
 
+                quoteTextArea.cols = 35;
+                quoteTextArea.rows = 5;
+                quoteAuthor.cols = 35;
+                quoteAuthor.rows = 5;
+                
                 quoteTotal.appendChild(quoteTextArea);
                 quoteTotal.appendChild(quoteAuthor);
                 quoteTotal.appendChild(document.createElement('br'));
