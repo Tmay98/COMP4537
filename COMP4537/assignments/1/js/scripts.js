@@ -44,7 +44,8 @@ function deleteQuote() {
     xhttp.send();
     let el = document.getElementById("q" + id);
     el.parentNode.removeChild(el);
-    quoteCount--
+    quoteCount--;
+    alert('Quote Deleted!');
 }
 
 function saveQuote() {
@@ -55,6 +56,7 @@ function saveQuote() {
     console.log(id);
     xhttp.open("GET", "https://tommy-write.herokuapp.com/?index=" + id + "&quoteText=" + name + "&author=" + score, true);
     xhttp.send();
+    alert('Quote Saved!');
 }
 
 function initfromdb() {
