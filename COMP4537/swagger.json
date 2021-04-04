@@ -6,59 +6,9 @@
     "version": "v1"
   },
   "paths": {
-    "/quiz/questions": {
+    "/quiz": {
       "get": {
         "summary": "Returns a list of questions.",
-        "description": "Returns a list of questions.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "id": 1,
-                "question": "random question",
-                "answer1": "wrong",
-                "answer2": "wrong2",
-                "answer3": "correct",
-                "answer4": "wrongagain",
-                "answerindex": 3
-              }
-            },
-            "description": "A JSON array of questions"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      }
-    },
-    "/quiz/{question}": {
-      "post": {
-        "summary": "posts a new question.",
-        "description": "Posts a new question.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "id": 1,
-                "question": "random question",
-                "answer1": "wrong",
-                "answer2": "wrong2",
-                "answer3": "correct",
-                "answer4": "wrongagain",
-                "answerindex": 3
-              }
-            },
-            "description": "A JSON question"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      }
-    },
-    "/quiz/questions/{questionNumber}": {
-      "delete": {
-        "summary": "deletes a question of given number.",
         "description": "Returns a list of questions.",
         "responses": {
           "200": {
@@ -78,8 +28,10 @@
             "description": "404 not found"
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/quiz/{questions}": {
+      "post": {
         "summary": "posts a new question.",
         "description": "Posts a new question.",
         "responses": {
@@ -95,7 +47,7 @@
                 "answerindex": 3
               }
             },
-            "description": "A JSON question"
+            "description": "A JSON array of questions"
           },
           "404":{
             "description": "404 not found"
@@ -103,92 +55,23 @@
         }
       }
     },
-    "/quiz/highscore/{score}": {
-      "post": {
-        "summary": "posts a new highscore.",
-        "description": "Posts a new highscore.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "name": "tommy",
-                "value": "100"
-              }
-            },
-            "description": "A JSON highscore"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      },
-      "put": {
-        "summary": "updates a highscore.",
-        "description": "updates a highscore.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "name": "tommy",
-                "value": "100"
-              }
-            },
-            "description": "A JSON highscore"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      },
+    "/quiz/{questionNumber}": {
       "delete": {
-        "summary": "deletes a highscore.",
-        "description": "deletes a highscore.",
+        "summary": "deletes a question of given number.",
+        "description": "Returns a list of questions.",
         "responses": {
           "200": {
             "examples": {
               "application/json" : {
-                "name": "tommy"
+                "id": 1,
+                "question": "bro",
+                "a1": "1",
+                "a2": "2",
+                "a3": "3",
+                "a4": "4"
               }
             },
-            "description": "A JSON highscore"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      }
-    },
-    "/quiz/login":{
-      "post": {
-        "summary": "posts a new login.",
-        "description": "posts a new login.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "id": "id",
-                "pass": "pass"
-              }
-            },
-            "description": "A users login details"
-          },
-          "404":{
-            "description": "404 not found"
-          }
-        }
-      },
-      "put": {
-        "summary": "updates an existing login.",
-        "description": "updates an existing login.",
-        "responses": {
-          "200": {
-            "examples": {
-              "application/json" : {
-                "id": "id",
-                "pass": "pass"
-              }
-            },
-            "description": "A users login details"
+            "description": "A JSON array of questions"
           },
           "404":{
             "description": "404 not found"
