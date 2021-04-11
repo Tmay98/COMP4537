@@ -9,10 +9,10 @@
 const api_key = "?apikey=a56d4c63-b6c6-4d4a-b013-3e501f8dba5a";
 
 function updateCounterUI(counterResponse) {
-    document.getElementById("quizGet").innerHTML = counterResponse["/API/v1/quiz"].GET;
-    document.getElementById("quizPost").innerHTML = counterResponse["/API/v1/quiz"].POST;
-    document.getElementById("quizPut").innerHTML = counterResponse["/API/v1/quiz"].PUT;
-    document.getElementById("quizDelete").innerHTML = counterResponse["/API/v1/quiz"].DELETE;
+    document.getElementById("quizGet").innerHTML = counterResponse["/API/v1/quiz/"].GET;
+    document.getElementById("quizPost").innerHTML = counterResponse["/API/v1/quiz/"].POST;
+    document.getElementById("quizPut").innerHTML = counterResponse["/API/v1/quiz/"].PUT;
+    document.getElementById("quizDelete").innerHTML = counterResponse["/API/v1/quiz/"].DELETE;
 
 }
 
