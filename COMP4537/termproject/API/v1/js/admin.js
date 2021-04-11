@@ -6,6 +6,7 @@
 //         DELETE: 0
 //     },
 // };
+const api_key = "?apikey=a56d4c63-b6c6-4d4a-b013-3e501f8dba5a";
 
 function updateCounterUI(counterResponse) {
     document.getElementById("quizGet").innerHTML = counterResponse["/API/v1/quiz"].GET;
@@ -17,7 +18,7 @@ function updateCounterUI(counterResponse) {
 
 function getCounterFromDB() {
     const xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://www.jsshin.com/COMP4537/labs/quiz/counter");
+    xhttp.open("GET", "https://www.jsshin.com/API/V1/counter" + api_key);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
